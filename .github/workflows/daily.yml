@@ -1,29 +1,20 @@
 name: 每日AI日报
 
-# 触发条件
 on:
   schedule:
-    - cron: '0 10 * * *'   # UTC 10点 = 北京时间 18点，每天下午6点自动运行
-  workflow_dispatch:        # 允许手动点击“Run workflow”测试
+    - cron: '0 10 * * *'  
+  workflow_dispatch:
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ 拉取仓库代码
       - uses: actions/checkout@v3
-
-      # 2️⃣ 安装 Python
       - name: 安装 Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
-      # 3️⃣ 安装 requests 库
-      - name: 安装 requests
-        run: pip install requests
-
-      # 4️⃣ 执行日报脚本
+      - name: 安装依赖
+        run: pip install requests beautifulsoup4
       - name: 执行脚本
         run: python daily_bot.py
