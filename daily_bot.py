@@ -4,7 +4,7 @@ from datetime import datetime
 # ----------------------------
 # 配置
 # ----------------------------
-DINGTALK_WEBHOOK = "在这里粘贴你的钉钉Webhook地址"
+DINGTALK_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=0b6d7a2af6a1768be7285e2a8c5f6de05bbe685677cfc3115f841b76cb285e66"
 NEWS_LIST = [
     {"title": "OpenAI 发布 GPT-5", "link": "https://xxx.com/news1"},
     {"title": "百度文心大模型更新", "link": "https://xxx.com/news2"},
