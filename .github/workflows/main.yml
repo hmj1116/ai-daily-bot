@@ -2,7 +2,7 @@ name: 每日AI日报
 on:
   schedule:
     # 每天早上 9 点执行（UTC时间），北京时间 = UTC +8
-    - cron: '0 1 * * *'
+    - cron: '0 10 * * *'
 jobs:
   run-bot:
     runs-on: ubuntu-latest
